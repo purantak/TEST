@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Home in Westfield, NJ - Red-Isle Reality</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+        }
+
+        .content-wrapper {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .property-section {
+            padding: 40px;
+            border-bottom: 3px solid #e67e22;
+        }
+
+        .property-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .property-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .property-header h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .property-header .address {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 3rem;
+            color: #e74c3c;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: table;
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: separate;
+            border-spacing: 15px;
+        }
+
+        .features-row {
+            display: table-row;
+        }
+
+        .feature-item {
+            display: table-cell;
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            border-left: 4px solid #e67e22;
+            width: 16.666%;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .highlights {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .highlights h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .highlights-list {
+            display: table;
+            width: 100%;
+        }
+
+        .highlights-column {
+            display: table-cell;
+            width: 50%;
+            padding: 0 15px;
+            vertical-align: top;
+        }
+
+        .highlights ul {
+            list-style: none;
+        }
+
+        .highlights li {
+            padding: 10px 0;
+            border-bottom: 1px solid #bdc3c7;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .highlights li:last-child {
+            border-bottom: none;
+        }
+
+        .highlights li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        .form-section {
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+        }
+
+        .form-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-section p {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.3);
+        }
+
+        .phone-container {
+            display: table;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+
+        .phone-container select {
+            display: table-cell;
+            width: 150px;
+        }
+
+        .phone-container input {
+            display: table-cell;
+            width: auto;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #e67e22;
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #d35400;
+        }
+
+        .success-message {
+            display: none;
+            background: #27ae60;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .property-header h2 {
+                font-size: 2rem;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header {
+                padding: 25px 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1.1rem;
+            }
+            
+            .property-section {
+                padding: 30px;
+            }
+            
+            .property-image img {
+                height: 300px;
+            }
+            
+            .property-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .price {
+                font-size: 2.2rem;
+            }
+            
+            .form-section {
+                padding: 30px;
+            }
+            
+            .form-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+                margin-bottom: 5px;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .property-section {
+                padding: 20px;
+            }
+            
+            .property-image img {
+                height: 250px;
+            }
+            
+            .property-header h2 {
+                font-size: 1.6rem;
+            }
+            
+            .property-header .address {
+                font-size: 1.1rem;
+            }
+            
+            .price {
+                font-size: 2rem;
+            }
+            
+            .features-grid,
+            .features-row,
+            .feature-item {
+                display: block;
+                width: 100%;
+            }
+            
+            .feature-item {
+                margin-bottom: 15px;
+                padding: 15px;
+            }
+            
+            .feature-item strong {
+                font-size: 1.2rem;
+            }
+            
+            .highlights {
+                padding: 20px;
+            }
+            
+            .highlights h3 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+            
+            .highlights-list,
+            .highlights-column {
+                display: block;
+                width: 100%;
+            }
+            
+            .highlights-column {
+                padding: 0;
+                margin-bottom: 15px;
+            }
+            
+            .highlights li {
+                padding: 8px 0;
+                font-size: 0.95rem;
+            }
+            
+            .form-section {
+                padding: 25px 20px;
+            }
+            
+            .form-section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 10px;
+            }
+            
+            .form-section p {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+            
+            .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .form-group label {
+                font-size: 1rem;
+                margin-bottom: 6px;
+            }
+            
+            .form-group input,
+            .form-group select {
+                padding: 12px;
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+            
+            .phone-container,
+            .phone-container select,
+            .phone-container input {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .submit-btn {
+                padding: 15px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 5px;
+            }
+            
+            .header {
+                padding: 15px 10px;
+                margin-bottom: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .header p {
+                font-size: 0.9rem;
+            }
+            
+            .property-section {
+                padding: 15px;
+            }
+            
+            .property-image {
+                margin-bottom: 20px;
+            }
+            
+            .property-image img {
+                height: 200px;
+            }
+            
+            .property-header h2 {
+                font-size: 1.4rem;
+                margin-bottom: 8px;
+            }
+            
+            .property-header .address {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+            
+            .price {
+                font-size: 1.8rem;
+            }
+            
+            .feature-item {
+                padding: 12px;
+                margin-bottom: 10px;
+            }
+            
+            .feature-item strong {
+                font-size: 1.1rem;
+            }
+            
+            .highlights {
+                padding: 15px;
+                margin-top: 20px;
+            }
+            
+            .highlights h3 {
+                font-size: 1.2rem;
+                margin-bottom: 12px;
+            }
+            
+            .highlights li {
+                padding: 6px 0;
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            
+            .form-section {
+                padding: 20px 15px;
+            }
+            
+            .form-section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .form-section p {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+            
+            .form-group {
+                margin-bottom: 15px;
+            }
+            
+            .form-group input,
+            .form-group select {
+                padding: 10px;
+            }
+            
+            .submit-btn {
+                padding: 12px;
+                font-size: 1rem;
+            }
+            
+            .success-message {
+                padding: 20px;
+                font-size: 1rem;
+            }
+            
+            .success-message h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Tablet-specific optimizations */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .property-section {
+                padding: 35px;
+            }
+            
+            .property-image img {
+                height: 320px;
+            }
+            
+            .features-grid {
+                margin: 25px 0;
+            }
+            
+            .feature-item {
+                padding: 18px;
+            }
+            
+            .highlights {
+                padding: 25px;
+            }
+            
+            .form-section {
+                padding: 35px;
+            }
+            
+            .form-container {
+                max-width: 450px;
+            }
+        }
+
+        /* High-resolution desktop optimizations */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 98%;
+                padding: 30px;
+            }
+            
+            .property-section {
+                padding: 60px;
+            }
+            
+            .property-image {
+                max-width: 900px;
+            }
+            
+            .property-image img {
+                height: 450px;
+            }
+            
+            .form-container {
+                max-width: 700px;
+            }
+            
+            .features-grid {
+                margin: 40px 0;
+            }
+            
+            .highlights {
+                padding: 40px;
+                margin-top: 40px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 96%;
+            }
+            
+            .property-section {
+                padding: 50px;
+            }
+            
+            .property-image {
+                max-width: 850px;
+            }
+            
+            .property-image img {
+                height: 400px;
+            }
+        }
+
+        /* Touch-friendly optimizations */
+        @media (pointer: coarse) {
+            .form-group input,
+            .form-group select,
+            .submit-btn {
+                min-height: 44px; /* Apple's recommended touch target size */
+            }
+            
+            .submit-btn {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 Red-Isle Reality</h1>
+            <p>Your Dream Home Awaits</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="property-section">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Beautiful home exterior">
+                </div>
+                
+                <div class="property-header">
+                    <h2>1247 Maple Grove Lane</h2>
+                    <div class="address">Westfield, NJ 07090</div>
+                    <div class="price">$485,000</div>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="features-row">
+                        <div class="feature-item">
+                            <strong>3</strong>
+                            Bedrooms
+                        </div>
+                        <div class="feature-item">
+                            <strong>2.5</strong>
+                            Bathrooms
+                        </div>
+                        <div class="feature-item">
+                            <strong>1,850</strong>
+                            Sq Ft
+                        </div>
+                        <div class="feature-item">
+                            <strong>0.3</strong>
+                            Acres
+                        </div>
+                        <div class="feature-item">
+                            <strong>2018</strong>
+                            Built Year
+                        </div>
+                        <div class="feature-item">
+                            <strong>2-Car</strong>
+                            Garage
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlights">
+                    <h3>🌟 Key Features</h3>
+                    <div class="highlights-list">
+                        <div class="highlights-column">
+                            <ul>
+                                <li>Stunning open-concept kitchen with quartz countertops and stainless steel appliances</li>
+                                <li>Elegant hardwood flooring flows throughout the main living areas</li>
+                                <li>Fully finished lower level perfect for family entertainment and gatherings</li>
+                                <li>Private backyard oasis with professional landscaping and mature shade trees</li>
+                                <li>Award-winning Westfield school district with excellent ratings</li>
+                            </ul>
+                        </div>
+                        <div class="highlights-column">
+                            <ul>
+                                <li>Prime location just minutes from vibrant downtown shopping and dining</li>
+                                <li>Convenient commuter access to New York City via direct train service</li>
+                                <li>Peaceful tree-lined street in established family-friendly neighborhood</li>
+                                <li>Energy-efficient windows and modern HVAC system for year-round comfort</li>
+                                <li>Spacious master suite with walk-in closet and en-suite bathroom</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Schedule Your Visit</h2>
+                <p>Interested in this beautiful property? Fill out the form below and our agent Robert will contact you soon!</p>
+                
+                <div class="form-container">
+                    <form id="propertyForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <div class="phone-container">
+                                <select id="countryCode" name="countryCode" required>
+                                    <option value="">Country Code</option>
+                                    <option value="+1">🇺🇸 +1 (USA)</option>
+                                    <option value="+1">🇨🇦 +1 (Canada)</option>
+                                    <option value="+44">🇬🇧 +44 (UK)</option>
+                                    <option value="+91">🇮🇳 +91 (India)</option>
+                                    <option value="+61">🇦🇺 +61 (Australia)</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter phone number">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Request Information</button>
+                    </form>
+                    
+                    <div id="successMessage" class="success-message">
+                        <h3>✅ Form Submitted Successfully!</h3>
+                        <p>Thank you for your interest! Our agent will be in touch with you soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('propertyForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                countryCode: formData.get('countryCode'),
+                phone: formData.get('phone'),
+                fullPhone: formData.get('countryCode') + formData.get('phone'),
+                property: '1247 Maple Grove Lane, Westfield, NJ 07090',
+                timestamp: new Date().toISOString()
+            };
+            
+            try {
+                const response = await fetch('https://hook.eu2.make.com/d7kfxlb5p27skbs7ym7h973fssgmucz2', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                // Show success message
+                document.getElementById('propertyForm').style.display = 'none';
+                document.getElementById('successMessage').classList.add('show');
+                
+            } catch (error) {
+                console.error('Error:', error);
+                // Still show success message to user
+                document.getElementById('propertyForm').style.display = 'none';
+                document.getElementById('successMessage').classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>
